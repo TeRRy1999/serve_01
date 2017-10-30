@@ -11,7 +11,7 @@ def index():
 def plusone(num):
 	return '%d' % (num + 1)
 	
-@app.route('/request',method=['GET' ,'POST'])
+@app.route('/request',methods=['GET' ,'POST'])
 def processreq():
 	if request.method == 'GET':
 		return "Get key: %s,val: %s" % (request.args.get('key'),request.args.get('val'))
