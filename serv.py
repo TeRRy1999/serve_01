@@ -15,7 +15,7 @@ def plusone(num):
 def processreq():
 	if request.method == 'GET':
 		return "Get key: %s,val: %s" % (request.args.get('key'),request.args.get('val'))
-	else
+	else:
 		return "Post key: %s,val: %s" % (request.form['key'],request.form['val'])
 
 @app.route('/postpage/')
