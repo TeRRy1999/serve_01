@@ -14,15 +14,15 @@ def plusone(num):
 @app.route('/request',method=['GET' ,'POST'])
 def processreq():
 	if request.method == 'GET':
-		return "Get key: %s,val: %s % (request.args.get('key'),request.args.get('val'))
+		return "Get key: %s,val: %s" % (request.args.get('key'),request.args.get('val'))
 	else
-		return "Post key: %s,val: %s % (request.form['key'],request.form['val'])
+		return "Post key: %s,val: %s" % (request.form['key'],request.form['val'])
 
 @app.route('/postpage/')
 @app.route('/postpage/<pname>')
 def postpage(pname = "No_name"):
 	return render_template('postform.html',name = pname)
-	
+
 if __name__ == "__main__":
     app.run(host = '0.0.0.0',debug = true)
     
